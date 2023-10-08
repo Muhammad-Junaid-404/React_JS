@@ -1,7 +1,6 @@
-import React from "react";
-import { useId } from "react";
+import React, { useId } from "react";
 
-const InputBox = ({
+function InputBox({
   label,
   amount,
   onAmountChange,
@@ -11,16 +10,17 @@ const InputBox = ({
   amountDisable = false,
   currencyDisable = false,
   className = "",
-}) => {
+}) {
   const amountInputId = useId();
+
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
       <div className="w-1/2">
         <label
-          className="text-black/40 mb-2 inline-block"
           htmlFor={amountInputId}
+          className="text-black/40 mb-2 inline-block"
         >
-          label
+          {label}
         </label>
         <input
           id={amountInputId}
@@ -51,6 +51,6 @@ const InputBox = ({
       </div>
     </div>
   );
-};
+}
 
 export default InputBox;
