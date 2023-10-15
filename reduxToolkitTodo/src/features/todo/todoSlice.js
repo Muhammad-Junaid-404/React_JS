@@ -5,7 +5,7 @@ const initialState = {
     todos: JSON.parse(localStorage.getItem("todos")) || [
         {
             id: nanoid(),
-            text: "Welcome to Redux",
+            text: "Welcome to RTK",
         },
     ],
     editedTodo: null,
